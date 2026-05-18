@@ -1,2 +1,9 @@
 #!/bin/bash
-su betty
+name: Switch User Demo
+on: [push, workflow_dispatch]
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          su betty
